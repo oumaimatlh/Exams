@@ -1,22 +1,29 @@
 package main
-
-
 func CanJump(n []uint) bool {
-	
-	valid := false
-	
-	for i := 0; i < len(n); i++ {
-		pos := i
-		jump := n[i]
+	if len(n) == 0 {
+		return false
+	}
+	if len(n) == 1 {
+		return true
+	}
 
-		if  i != len(n)-1 {
-			pos = int(jump)
-			i += pos+1
-		}else {
-			valid = true
-			//break
+	pos := 0
+	last := len(n) - 1
+
+	for {
+		jump := int(n[pos])
+
+		if jump == 0 {
+			return false
+		}
+
+		pos += jump
+
+		if pos == last {
+			return true
+		}
+		if pos > last {
+			return false
 		}
 	}
-	
-	return  valid
 }

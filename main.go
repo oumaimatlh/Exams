@@ -1,16 +1,8 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
-	input1 := []uint{2, 3, 1, 1, 4}
-	fmt.Println(CanJump(input1))
-
-	input2 := []uint{4, 2, 1, 0, 4}
-	fmt.Println(CanJump(input2))
-
-	input3 := []uint{0}
-	fmt.Println(CanJump(input3))
+	Chunk([]int{}, 10)
+	Chunk([]int{0, 1, 2, 3, 4, 5, 6, 7}, 3)
+	Chunk([]int{0, 1, 2, 3, 4, 5, 6, 7}, 6)
+	Chunk([]int{0, 1, 2, 3, 4, 5, 6, 7}, 4)
 }

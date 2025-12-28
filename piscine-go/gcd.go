@@ -1,6 +1,5 @@
 package piscine
 
-import "fmt"
 
 func Gcd(a, b uint) uint {
 	diva := []uint{}
@@ -28,8 +27,5 @@ func Gcd(a, b uint) uint {
 			}
 		}
 	}
-
-	fmt.Println(diva)
-	fmt.Println(divb)
 	return uint(gcd)
 }

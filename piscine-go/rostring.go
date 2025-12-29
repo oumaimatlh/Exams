@@ -1,12 +1,11 @@
-package main
+package piscine
 
 import (
 	"fmt"
 	"os"
-	"strings"
 )
 
-func main() {
+func Rostring() {
 	if len(os.Args) != 2 {
 		return
 	}
@@ -28,17 +27,11 @@ func main() {
 	if len(word) != 0 {
 		words = append(words, word)
 	}
-	fmt.Println(strings.Join(words, "||"))
 	
-
 	s := ""
-	
-	// for i := 0 ; i < len(words[1:]); i++ {
-	// 	s += words[i] + " "
-	// }
-	
-	// s += words[0]
+	for i := 1 ; i < len(words); i++ {
+		s += words[i] + " "
+	}
+	s += words[0]
 	fmt.Println(s)
-	
-
 }
